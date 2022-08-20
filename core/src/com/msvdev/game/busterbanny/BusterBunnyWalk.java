@@ -1,13 +1,15 @@
 package com.msvdev.game.busterbanny;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
 
 public class BusterBunnyWalk {
 
-    // Текстура движений персонажа
-    private final Texture img;
+    // Атлас движений персонажа
+    private final TextureAtlas atlas;
+
 
     // Анимация перемещения шагом
     private final Animation<TextureRegion> walk;
@@ -21,30 +23,16 @@ public class BusterBunnyWalk {
 
     /**
      * Основной конструктор объекта
-     * @param imageFileName файл с изображением действий
-     * @param col количество колонок (фрагментов по горизонтали)
-     * @param row количество строк (фрагментов по вертикали)
+     * @param atlasFileName пить к файлу с атласом движений персонажа
      */
-    public BusterBunnyWalk(String imageFileName, int col, int row) {
+    public BusterBunnyWalk(String atlasFileName) {
 
-        img = new Texture(imageFileName);
-        TextureRegion region = new TextureRegion(img);
-
-        int xCnt = region.getRegionWidth() / col;
-        int yCnt = region.getRegionHeight() / row;
-
-        TextureRegion[][] regions = region.split(xCnt, yCnt);
-        TextureRegion[] regionsArray = new TextureRegion[regions.length * regions[0].length];
-        int cnt = 0;
-        for (int i = 0; i < regions.length; i++) {
-            for (int j = 0; j < regions[0].length; j++) {
-                regionsArray[cnt++] = regions[i][j];
-            }
-        }
+        atlas = new TextureAtlas(atlasFileName);
 
         float frameDuration = 1/4f;
 
-        walk = new Animation<>(frameDuration, regionsArray);
+        walk = new Animation<TextureRegion>(frameDuration, atlas.findRegions("walk"));
+
         walk.setPlayMode(Animation.PlayMode.LOOP);
 
         time = 0;
@@ -96,7 +84,7 @@ public class BusterBunnyWalk {
      * Освобождение ресурсов
      */
     public void dispose() {
-        img.dispose();
+        atlas.dispose();
     }
 
 
