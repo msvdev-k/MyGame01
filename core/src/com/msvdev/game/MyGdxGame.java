@@ -26,12 +26,12 @@ public class MyGdxGame extends ApplicationAdapter {
 	public void create () {
 		batch = new SpriteBatch();
 
-		busterBunnyWalk = new BusterBunnyWalk("BusterBunnyWalk.png", 6, 1);
+		busterBunnyWalk = new BusterBunnyWalk("atlas/BusterBunny.atlas");
 		busterBunnyWalk.setPlayMode(Animation.PlayMode.LOOP);
 
-		float duration = 1/4f;
+		float duration = 1/5f;
 		xRun = 0f;
-		vxRun = 12/duration;
+		vxRun = 8/duration;
 		forwardMovement = true;
 
 	}
