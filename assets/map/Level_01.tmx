@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="108" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="3">
+ <tileset firstgid="1" name="Lavel_01" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="225" columns="15">
+  <image source="Level_01.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Основная поветхность" width="108" height="30" offsetx="1.39427" offsety="3.87879">
+  <data encoding="base64" compression="zlib">
+   eJztmL1rFEEYxietrRoxJKCFIDYGEuOhmIAsWTFuIXdX+FFZpIgQi6i9iCimU0HFf9ZZnBee/eXd3IXMkZPMwsPszO68MzvP+7kLIYSFgoKCgoKCgoIzxJ052EPBdLgbcSm166ldi7jvvHsj4kHEtTnY93nFYcQHBz8jfuPd6xE3Iy7Mwb7PK55HjBy8ifgR8SviW/hnd7cjbqX7SVD7XEljyxGL0rZj9xIGERfTs7X0fCD3GxFLCYupvSpYSHLa8StJzkD6A3z3iqzZYj3JbWWtytyNJHc19QdJ3qKsY3tZTu+vybotLouspeD7rtPyZfge8Sd0be9j8G1S8TniUcKnKd6fNXQ/Lb6e4V6+zJAvYjxlux+xnbB7gnna5kS7n01Bu6dKvqtJbZXux+le+yOZM5Z3Rnhmc6zl/NcZ+Hp1Qnj8jWXczsf4qvC8CV09aKZcV8+gkbUryB2H7ll7fJEflanfNgrdc1euKswlP8abyjstX2oLdsZ1xDD1a2mHCWYzx9mXzbGzoQ4rz/uyvq1rfbvfhqwqdM9vhGeT+CI/PHuO6xrKh/LHb1S+DDn40m+p5X4I7qy/F7o6X4WuHRyInL0w2W4OwIu3B/Vj9Fc6Rl0w/Xko2A1HbavPV1AvlCvPpvR99YsmOwdfxscTB2p31HuzNbOPociiDgyDbzObmKv3NcbMLuhjPJ6UP+q5+jL6PsYntbc+vzvGOtyXxrYcfKnPq+V89Ly2ZVzP2Pjq40o5rkOXI9qScujpzkuHHzs39YPMk6rg6zvlaK5Bf9dgzItx1BvqSJOJL+981Qc+FuygfRHx1nlnR95p8Qxz9TnjZi191SXNE5gLUI+Z23k+T3nsG6fvZXzzYhTtUveUmy+NF2YzjEG6P7V9+gKend57uSRzDbVL4+u4PMPzT8zfaC/q99Su6Ae9b256ZKlN08Zy8LUlqAVePNE8rS9Poi4qlxp7mtDVFy839OLXyJHdl+Mzn9Q5ffx4eQb1jPHOG2Mem9sfavxQ36T+SWsq77u8+pJxWvXyXfBjla5ra++Go2feQK5Xr3r5updH0ieM0TJ/6Ytpno+2d3LlG/Q9tCv1lVoH6Z4ZW/j96i9t7j7WVdtmfql80b68+EEdV9tjjunlJdRD+ggv52ywPv1Qrnq5PZMtQO1Nc4Ljairbv9d/L7C+1WqqI6o72qqe8PzVtpl7jPCul4/3+UDqHmMj5dImqR85+aJ9aat5vZeD65mqj9V8nxzoPxPWAvac+TxrZC/G0H76fJNXB7NPWcztWQ/StpjHziKfZz6t6KubNef2+PL0QPNC+kK2zHM8f8P8Qf1QH3+0I7UL+sIKsrkufT/zk1x8sSbSuslg589xzmE9Zn3K1b5xxhqP9Z7WX/SBXt1FbnQe/RrjqpcrMv6qz1UfS5vS5zn+z09Cy+nTBP3XmwOzlD2PmMRXucpVrnKVq1z/4/UXtV0cUQ==
+  </data>
+ </layer>
+ <objectgroup id="2" name="Объекты">
+  <object id="1" name="Камера" x="310" y="232">
+   <point/>
+  </object>
+  <object id="2" name="Граница карты" x="1.27273" y="4.90909" width="3455.85" height="830.841"/>
+ </objectgroup>
+</map>
