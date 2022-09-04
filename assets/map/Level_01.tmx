@@ -1,17 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="108" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="3">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="108" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="49">
  <tileset firstgid="1" name="Lavel_01" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="225" columns="15">
   <image source="Level_01.png" width="512" height="512"/>
  </tileset>
- <layer id="1" name="Основная поветхность" width="108" height="30" offsetx="1.39427" offsety="3.87879">
+ <layer id="1" name="Задний фон" width="108" height="30">
   <data encoding="base64" compression="zlib">
    eJztmL1rFEEYxietrRoxJKCFIDYGEuOhmIAsWTFuIXdX+FFZpIgQi6i9iCimU0HFf9ZZnBee/eXd3IXMkZPMwsPszO68MzvP+7kLIYSFgoKCgoKCgoIzxJ052EPBdLgbcSm166ldi7jvvHsj4kHEtTnY93nFYcQHBz8jfuPd6xE3Iy7Mwb7PK55HjBy8ifgR8SviW/hnd7cjbqX7SVD7XEljyxGL0rZj9xIGERfTs7X0fCD3GxFLCYupvSpYSHLa8StJzkD6A3z3iqzZYj3JbWWtytyNJHc19QdJ3qKsY3tZTu+vybotLouspeD7rtPyZfge8Sd0be9j8G1S8TniUcKnKd6fNXQ/Lb6e4V6+zJAvYjxlux+xnbB7gnna5kS7n01Bu6dKvqtJbZXux+le+yOZM5Z3Rnhmc6zl/NcZ+Hp1Qnj8jWXczsf4qvC8CV09aKZcV8+gkbUryB2H7ll7fJEflanfNgrdc1euKswlP8abyjstX2oLdsZ1xDD1a2mHCWYzx9mXzbGzoQ4rz/uyvq1rfbvfhqwqdM9vhGeT+CI/PHuO6xrKh/LHb1S+DDn40m+p5X4I7qy/F7o6X4WuHRyInL0w2W4OwIu3B/Vj9Fc6Rl0w/Xko2A1HbavPV1AvlCvPpvR99YsmOwdfxscTB2p31HuzNbOPociiDgyDbzObmKv3NcbMLuhjPJ6UP+q5+jL6PsYntbc+vzvGOtyXxrYcfKnPq+V89Ly2ZVzP2Pjq40o5rkOXI9qScujpzkuHHzs39YPMk6rg6zvlaK5Bf9dgzItx1BvqSJOJL+981Qc+FuygfRHx1nlnR95p8Qxz9TnjZi191SXNE5gLUI+Z23k+T3nsG6fvZXzzYhTtUveUmy+NF2YzjEG6P7V9+gKend57uSRzDbVL4+u4PMPzT8zfaC/q99Su6Ae9b256ZKlN08Zy8LUlqAVePNE8rS9Poi4qlxp7mtDVFy839OLXyJHdl+Mzn9Q5ffx4eQb1jPHOG2Mem9sfavxQ36T+SWsq77u8+pJxWvXyXfBjla5ra++Go2feQK5Xr3r5updH0ieM0TJ/6Ytpno+2d3LlG/Q9tCv1lVoH6Z4ZW/j96i9t7j7WVdtmfql80b68+EEdV9tjjunlJdRD+ggv52ywPv1Qrnq5PZMtQO1Nc4Ljairbv9d/L7C+1WqqI6o72qqe8PzVtpl7jPCul4/3+UDqHmMj5dImqR85+aJ9aat5vZeD65mqj9V8nxzoPxPWAvac+TxrZC/G0H76fJNXB7NPWcztWQ/StpjHziKfZz6t6KubNef2+PL0QPNC+kK2zHM8f8P8Qf1QH3+0I7UL+sIKsrkufT/zk1x8sSbSuslg589xzmE9Zn3K1b5xxhqP9Z7WX/SBXt1FbnQe/RrjqpcrMv6qz1UfS5vS5zn+z09Cy+nTBP3XmwOzlD2PmMRXucpVrnKVq1z/4/UXtV0cUQ==
   </data>
  </layer>
- <objectgroup id="2" name="Объекты">
-  <object id="1" name="Камера" x="310" y="232">
-   <point/>
+ <objectgroup id="3" name="Твёрдые горизонтальные поверхности">
+  <properties>
+   <property name="friction" type="float" value="0.2"/>
+  </properties>
+  <object id="4" x="224" y="224" width="192" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
   </object>
-  <object id="2" name="Граница карты" x="1.27273" y="4.90909" width="3455.85" height="830.841"/>
+  <object id="5" x="512" y="288" width="448" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="7" x="544" y="544" width="768" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="8" x="288" y="800" width="288" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="9" x="576" y="832" width="64" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="10" x="640" y="800" width="672" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="11" x="1312" y="832" width="64" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="13" x="672" y="672" width="640" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="14" x="1024" y="288" width="1088" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="15" x="2208" y="288" width="1024" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="16" x="672" y="416" width="288" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="17" x="1024" y="416" width="320" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="18" x="1376" y="800" width="256" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="19" x="2112" y="416" width="96" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="20" x="416" y="224">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+   <polygon points="0,0 96,64 96,96 0,32"/>
+  </object>
+  <object id="21" x="352" y="448" width="160" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="22" x="288" y="576" width="96" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="23" x="352" y="672" width="128" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="24" x="768" y="512" width="64" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="25" x="896" y="768" width="64" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="26" x="1024" y="768" width="64" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="27" x="1312" y="608" width="160" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="28" x="1472" y="480" width="160" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="29" x="1536" y="704" width="96" height="16">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="30" x="288" y="352" width="384" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="31" x="1344" y="352" width="288" height="32">
+   <properties>
+    <property name="friction" type="float" value="0.2"/>
+   </properties>
+  </object>
+  <object id="48" x="224" y="0" width="3008" height="8"/>
+ </objectgroup>
+ <objectgroup id="5" name="Персонажи">
+  <object id="47" name="Герой" x="288" y="64" width="16" height="16">
+   <properties>
+    <property name="BodyType" value="DynamicBody"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="Твёрдые вертикальные поверхности">
+  <object id="32" x="672" y="384" width="32" height="32"/>
+  <object id="33" x="928" y="320" width="32" height="96"/>
+  <object id="34" x="768" y="448" width="64" height="64"/>
+  <object id="35" x="896" y="704" width="64" height="64"/>
+  <object id="36" x="1024" y="704" width="64" height="64"/>
+  <object id="37" x="672" y="576" width="32" height="96"/>
+  <object id="38" x="256" y="384" width="32" height="416"/>
+  <object id="39" x="192" y="0" width="32" height="224"/>
+  <object id="40" x="1024" y="320" width="32" height="96"/>
+  <object id="41" x="1280" y="576" width="32" height="96"/>
+  <object id="42" x="1632" y="384" width="32" height="416"/>
+  <object id="43" x="1312" y="384" width="32" height="32"/>
+  <object id="44" x="2080" y="320" width="32" height="96"/>
+  <object id="45" x="2208" y="320" width="32" height="96"/>
+  <object id="46" x="3232" y="0" width="32" height="288"/>
  </objectgroup>
 </map>
