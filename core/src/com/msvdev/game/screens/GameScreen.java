@@ -160,6 +160,9 @@ public class GameScreen implements Screen {
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             heroBody.applyForceToCenter(new Vector2(0.2f, 0), true);
         }
+        if (Gdx.input.isKeyPressed(Input.Keys.UP) && physicalWorld.getContactListener().isOnSolidSurfaceFlag()) {
+            heroBody.applyForceToCenter(new Vector2(0, 3f), true);
+        }
 
         // Поворот персонажа вправо или влево
         if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
