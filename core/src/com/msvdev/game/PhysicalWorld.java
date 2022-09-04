@@ -44,6 +44,8 @@ public class PhysicalWorld {
     // Переменная для отслеживания изменения времени в физическом мире
     private float deltaTimeAccumulator = 0;
 
+    // Описание контактов между телами
+    private final MyContactListener contactListener;
 
 
     /**
@@ -51,6 +53,10 @@ public class PhysicalWorld {
      */
     public PhysicalWorld() {
         world = new World(new Vector2(0, -ACCELERATION_OF_GRAVITY), true);
+
+        contactListener = new MyContactListener();
+        world.setContactListener(contactListener);
+
         debugRenderer = new Box2DDebugRenderer();
     }
 
@@ -119,7 +125,7 @@ public class PhysicalWorld {
 
             // Создание твёрдого тела в физическом мире
             Body body = world.createBody(bodyDef);
-            body.createFixture(fixtureDef);//.setUserData("стена");
+            body.createFixture(fixtureDef).setUserData("Твёрдая поверхность");
 
             // Освобождение ресурсов
             polygonShape.dispose();
@@ -196,8 +202,20 @@ public class PhysicalWorld {
 
         // Создание твёрдого тела в физическом мире
         Body body = world.createBody(def);
-        body.createFixture(fdef);//.setUserData("стена");
+        body.createFixture(fdef);
         body.setFixedRotation(true);
+
+        // Сенсор для прыжка (ноги)
+        polygonShape.setAsBox(
+                0.5f * rect.width / PPM,
+                0.5f * rect.height / PPM,
+                new Vector2(0, -0.95f * rect.height / PPM),
+                0
+        );
+        Fixture fixture = body.createFixture(fdef);
+        fixture.setSensor(true);
+        fixture.setUserData("Сенсор ног персонажа");
+
 
         // Освобождение ресурсов
         polygonShape.dispose();
@@ -237,5 +255,9 @@ public class PhysicalWorld {
     public void dispose() {
         world.dispose();
         debugRenderer.dispose();
+    }
+
+    public MyContactListener getContactListener() {
+        return contactListener;
     }
 }

@@ -4,6 +4,8 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
@@ -21,7 +23,8 @@ public class StartMenuScreen implements Screen {
     private final Rectangle rectangleScreen;
     private final Rectangle rectangleStartButton;
 
-
+    private final Music music;
+    private final Sound sound;
 
     public StartMenuScreen(Game game) {
         this.game = game;
@@ -32,6 +35,14 @@ public class StartMenuScreen implements Screen {
 
         rectangleScreen = new Rectangle();
         rectangleStartButton = new Rectangle();
+
+        music = Gdx.audio.newMusic(Gdx.files.internal("sound/map_menu.mp3"));
+        music.setLooping(true);
+        music.play();
+
+        sound = Gdx.audio.newSound(Gdx.files.internal("sound/button_press_single.mp3"));
+        sound.stop();
+
     }
 
 
@@ -82,6 +93,9 @@ public class StartMenuScreen implements Screen {
             dispose();
             game.setScreen(new GameScreen(this.game));
         }
+        if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT) && !rectangleStartButton.contains(x, y)) {
+            sound.play();
+        }
 
 
         // Прорисовка
@@ -130,6 +144,8 @@ public class StartMenuScreen implements Screen {
         batch.dispose();
         screen.dispose();
         startButton.dispose();
+        music.dispose();
+        sound.dispose();
     }
 
 }
